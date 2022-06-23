@@ -1,5 +1,8 @@
 public with sharing class ParkLocator {
-    // public static country () {
-
-    // }
+    public static List<String> country (String currentCountry) {
+		ParkService.ParksImplPort parkService = new ParkService.ParksImplPort();
+		List<String> result = parkService.byCountry(currentCountry);
+		System.debug(result);
+		return result;
+    }
 }
